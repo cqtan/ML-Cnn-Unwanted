@@ -11,8 +11,8 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args":[
-                "-m/${workspaceFolder}/blanks.model",
-                "-l/${workspaceFolder}/lb.pickle",
+                "-m/${workspaceFolder}/filter.model",
+                "-l/${workspaceFolder}/label.pickle",
                 "-i/${workspaceFolder}/test/content_3.tif",
             ]
         },
