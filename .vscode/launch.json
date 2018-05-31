@@ -9,7 +9,12 @@
             "type": "pythonExperimental",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "args":[
+                "-m/${workspaceFolder}/blanks.model",
+                "-l/${workspaceFolder}/lb.pickle",
+                "-i/${workspaceFolder}/test/content_3.tif",
+            ]
         },
         {
             "name": "Python Experimental: Attach",

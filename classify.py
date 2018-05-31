@@ -1,5 +1,5 @@
 # USAGE
-# python classify.py --model blanks.model --labelbin lb.pickle --image test/blank_(2).tif
+# python classify.py --model blanks.model --labelbin lb.pickle --image test/content_3.tif
 
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
@@ -12,7 +12,7 @@ import pickle
 import cv2
 import os
 
-""" # Configure amount of GPU memory to allocate:
+""" # Configure amount of GPU memory in % to allocate:
 config = tf.GPUOptions(per_process_gpu_memory_fraction=0.870)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=config)) """
 
