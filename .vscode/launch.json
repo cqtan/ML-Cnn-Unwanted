@@ -4,41 +4,60 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": "Python Experimental: Current File (Integrated Terminal)",
-            "type": "pythonExperimental",
+            "name": "Python: Current File",
+            "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal",
             "args":[
-                "-m/${workspaceFolder}/filter.model",
-                "-l/${workspaceFolder}/label.pickle",
-                "-i/${workspaceFolder}/test/content_3.tif",
+                "-m/${workspaceFolder}/filter_v2.model",
+                "-l/${workspaceFolder}/label_v2.pickle",
+                "-i/${workspaceFolder}/data",
             ]
         },
         {
-            "name": "Python Experimental: Attach",
-            "type": "pythonExperimental",
+            "name": "Python: Attach",
+            "type": "python",
             "request": "attach",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "${workspaceFolder}",
             "port": 3000,
+            "secret": "my_secret",
             "host": "localhost"
         },
         {
-            "name": "Python Experimental: Django",
-            "type": "pythonExperimental",
+            "name": "Python: Terminal (integrated)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Terminal (external)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Python: Django",
+            "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
-            "console": "integratedTerminal",
             "args": [
                 "runserver",
                 "--noreload",
                 "--nothreading"
             ],
-            "django": true
+            "debugOptions": [
+                "RedirectOutput",
+                "Django"
+            ]
         },
         {
-            "name": "Python Experimental: Flask",
-            "type": "pythonExperimental",
+            "name": "Python: Flask (0.11.x or later)",
+            "type": "python",
             "request": "launch",
             "module": "flask",
             "env": {
@@ -48,15 +67,56 @@
                 "run",
                 "--no-debugger",
                 "--no-reload"
-            ],
-            "jinja": true
+            ]
         },
         {
-            "name": "Python Experimental: Current File (External Terminal)",
-            "type": "pythonExperimental",
+            "name": "Python: Module",
+            "type": "python",
             "request": "launch",
+            "module": "module.name"
+        },
+        {
+            "name": "Python: Pyramid",
+            "type": "python",
+            "request": "launch",
+            "args": [
+                "${workspaceFolder}/development.ini"
+            ],
+            "debugOptions": [
+                "RedirectOutput",
+                "Pyramid"
+            ]
+        },
+        {
+            "name": "Python: Watson",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/console.py",
+            "args": [
+                "dev",
+                "runserver",
+                "--noreload=True"
+            ]
+        },
+        {
+            "name": "Python: All debug Options",
+            "type": "python",
+            "request": "launch",
+            "pythonPath": "${config:python.pythonPath}",
             "program": "${file}",
-            "console": "externalTerminal"
+            "module": "module.name",
+            "env": {
+                "VAR1": "1",
+                "VAR2": "2"
+            },
+            "envFile": "${workspaceFolder}/.env",
+            "args": [
+                "arg1",
+                "arg2"
+            ],
+            "debugOptions": [
+                "RedirectOutput"
+            ]
         }
     ]
 }
