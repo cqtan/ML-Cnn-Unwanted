@@ -1,0 +1,6 @@
+WARNING:tensorflow:Variable *= will be deprecated. Use variable.assign_mul if you want assignment to the variable value or 'x = x * y' if you want a new python Tensor object.
+INFO:root:Logging latest PPN classified...
+INFO:root:2018-06-04 00:52:44.071427 PPN61019657X
+INFO:root:2018-06-04 00:52:47.984546 PPN61029525X
+INFO:root:Check unidentified content in others directory: PPN61029525X, 0002_Page1_Block1.
+INFO:root:Check unidentified content in others directory: PPN61029525X, 0383_Page1_Block1.
