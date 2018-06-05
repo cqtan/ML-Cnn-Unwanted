@@ -10,11 +10,6 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args":[
-                "-m/${workspaceFolder}/filter_v2.model",
-                "-l/${workspaceFolder}/label_v2.pickle",
-                "-i/${workspaceFolder}/data",
-            ]
         },
         {
             "name": "Python: Attach",
