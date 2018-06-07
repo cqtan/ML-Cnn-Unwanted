@@ -7,7 +7,11 @@ Dependencies used for this are listed in the **requirements.txt** file. Download
 * `pip install -r requirements.txt`
 
 Or when using Anaconda:
-* `conda create --file package-list.txt`
+* First, add these to the conda channels to install packages outside from the default channels:
+    * `conda config --append channels conda-forge`
+    * `conda config --append channels gilbertfrancois`
+* Then install the packages listed in the 'package-list.txt' with:
+    * `conda install --file package-list.txt`
 
 ---
 ## tl;dr:
